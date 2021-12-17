@@ -54,9 +54,20 @@ table {
 }
 `;
 
+const CustomGlobalCSS = createGlobalStyle`
+* {
+	box-sizing: border-box;
+}
+body {
+	line-height: 1.2;
+	background:linear-gradient(135deg,tomato,brown);
+}
+`;
+
 ReactDOM.render(
   <React.StrictMode>
     <ResetCSS />
+    <CustomGlobalCSS />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
